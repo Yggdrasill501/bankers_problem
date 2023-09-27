@@ -1,50 +1,21 @@
 #include <iostream>
-#include <tuple>
 
-void bankers_problem(int bill){
-    int a = 5, b = 10, c = 20, d = 50, e = 100, f = 200, g = 500;
-    tuple<int, int, int, int, int, int, int> bills = make_tuple(a, b, c, d, e, f, g);
+const int N = 12;
 
-    while (bill != 0){
-        if (bill >= g){
-            bill -= g;
-        }
-        else if (bill >= f){
-            bill -= f;
-            std::cout << "200€" << std::endl;
-        }
-        else if (bill >= e){
-            bill -= e;
-            std::cout << "100€" << std::endl;
-        }
-        else if (bill >= d){
-            bill -= d;
-            std::cout << "50€" << std::endl;
-        }
-        else if (bill >= c){
-            bill -= c;
-            std::cout << "20€" << std::endl;
-        }
-        else if (bill >= b){
-            bill -= b;
-            std::cout << "10€" << std::endl;
-        }
-        else if (bill >= a){
-            bill -= a;
-            std::cout << "5€" << std::endl;
-        }
-        else{
-            std::cout << "Error" << std::endl;
-            break;
-        }
-    }
+unsigned int money[N] = {5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 2, 1};
+
+void calculate(unsigned int val, int n, unsigned int res[]){
+
+}
+
+void print(unsigned int val, int n, unsigned int *res){
 
 }
 
 int main() {
     int x;
 
-    std::cout << "Enter value of your bill in €" << std::endl;
+    std::cout << "Enter value of your bill in CZK" << std::endl;
     std::cin >> x;
 
     return 0;
